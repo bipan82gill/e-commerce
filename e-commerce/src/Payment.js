@@ -44,11 +44,12 @@ function Payment() {
                 card: elements.getElement(CardElement)
             }
         }).then(({ paymentIntent })=>{
+
             setSucceeded(true);
             setError(null);
             setProcessing(false)
 
-            history.replaceState('/orders')
+            history.replace('/orders')
         })
 
 

@@ -12,7 +12,7 @@ app.use(express.json());
 // -API routes
 app.get('/', (request, response)=> response.status(200).send('hello world'));
 
-app.post('/payments/creste', async(request, response)=>{
+app.post('/payments/create', async(request, response)=>{
     const total = request.query.total;
     console.log("Payment Request Recieved Boom !!!", total)
     const paymentIntent = await stripe.paymentIntents.create({
