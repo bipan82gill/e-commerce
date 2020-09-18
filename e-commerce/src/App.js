@@ -4,6 +4,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
+import Orders from './Orders';
 import {auth} from './firebase';
 import { useStateValue } from './StateProvider';
 import Payment from './Payment';
@@ -35,6 +36,10 @@ const [{}, dispatch] = useStateValue();
     <Router>
     <div className="App">
       <Switch>
+      <Route path ='/orders'> 
+        <Header/>
+         <Orders/>
+        </Route>
       <Route path ='/login'>
          <Login/>
         </Route>
